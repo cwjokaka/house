@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+   <meta charset="UTF-8">
+   <title>图片</title>
+   <style>
+       img {
+           width: 300px;
+           height: auto;
+           margin: 10px;
+       }
+   </style>
+</head>
+<body>
+   <h1>我的图片</h1>
+   <div id="image-container"></div>
+
+   <script>
+       // 图片数组
+       const imageUrls = [
+           "https://your-bucket.com/image1.jpg",
+           "https://your-bucket.com/image2.jpg",
+           "https://your-bucket.com/image3.jpg"
+       ];
+
+       // 动态添加图片
+       const container = document.getElementById("image-container");
+       for (const url of imageUrls) {
+           const img = document.createElement("img");
+           img.src = url;
+           container.appendChild(img);
+       }
+   </script>
+</body>
+</html>
